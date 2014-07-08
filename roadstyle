@@ -1,0 +1,31 @@
+//Roads.mss
+
+@road: #c8c8c1; //road color beige
+
+/* Various Zoom level line-width
+@rdz8: 1.5 means road zoom level 8 with line-width of 1.5 pixel
+*/
+
+/*Medium-zoom, level 8, 9 and 10.  roads have (motorway, trunk) as one group, (motorway_link, trunk_link) as another and (primary, secondary) as another group.
+*/
+
+/* line-width for zoom level 8 */
+@rdz8_motor:0.7  //road zoom 8 for motorway and trunk
+@rdz8_link:0.3 //road zoom 8 for motorway_link and trunk_link
+@rdz8_prim:0.3 //road zoom 8 for primary and secondary
+
+/* line-width for zoom level 9 */
+@rdz9_motor:0.7 //road zoom 9 for motorway and trunk
+@rdz9_link:0.4 //road zoom 9 for motorway_link and trunk_link
+@rdz9_prim:0.3 //road zoom 9 for primary and secondary
+
+/* line-width for zoom level 10 */
+@rdz9_motor:0.8  //road zoom 10 for motorway and trunk
+@rdz9_link:0.4 //road zoom 10 for motorway_link and trunk_link
+@rdz9_prim:0.4 //road zoom 10 for primary and secondary
+
+/* line-width for high zoom level 11, 12, 13, 14, 15, 16, 17
+roads have grouped
+*/
+
+
