@@ -319,7 +319,7 @@ roads have grouped */
 }
 
 /*Zoom leve 17 */
-#roads [zoom = 17]{
+#roads [zoom >= 17]{
   ::motor[type = 'motorway']{
       line-width:@rdz17_motor;
       line-color:@road;
@@ -341,19 +341,19 @@ roads have grouped */
       line-color:@road;
   }
 ::secondlink[type = 'secondary_link']{
-      line-width:@rdz15_prime;
+      line-width:@rdz17_prime;
       line-color:@road;
   }
 ::teritary[type = 'teritary']{
-      line-width:@rdz15_teritary;
+      line-width:@rdz17_teritary;
       line-color:@road;
   }
 ::teritlink[type = 'teritary_link']{
-      line-width:@rdz15_teritary;
+      line-width:@rdz17_teritary;
       line-color:@road;
   }
 ::resid[type = 'residential']{
-      line-width:@rdz15_resid;
+      line-width:@rdz17_resid;
       line-color:@road;
   }
 }

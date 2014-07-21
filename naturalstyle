@@ -1,0 +1,14 @@
+/* natural */
+
+@forest: #dee0d5;
+@park:lighten(@forest, 3%);
+
+#natural [zoom >= 8]{
+  ::forest[type = 'forest']{
+  polygon-fill: @forest;
+  }
+  ::park[type = 'park']{
+  polygon-fill: @park;
+  }
+
+}
