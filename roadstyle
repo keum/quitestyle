@@ -34,13 +34,13 @@ roads have grouped */
 @rdz11_primelink: 0.4;  //prime_link
 
 /* --- line-width for zoom level 12 --- */
-@rdz12_motor:2.0;  //motorway and trunk
+@rdz12_motor:1.8;  //motorway and trunk
 @rdz12_mlink:0.8; //motorway_link and trunk_link
 @rdz12_prime:0.8; //primary and secondary
 @rdz12_primelink:0.5; //prime_link
 
 /* --- line-width for zoom level 13 --- */
-@rdz13_motor:3.3;  //motorway and trunk
+@rdz13_motor:2.3;  //motorway and trunk
 @rdz13_mlink:1.3; //motorway_link and trunk_link
 @rdz13_prime: 1.0; //primary and secondary
 @rdz13_primelink: 0.8; //prime_link
@@ -48,50 +48,53 @@ roads have grouped */
 
 
 /* --- line-width for zoom level 14 --- */
-@rdz14_motor:3.8;  //motorway and trunk
+@rdz14_motor:2.8;  //motorway and trunk
 @rdz14_mlink:1.8; //motorway_link and trunk_link
-@rdz14_prime:1.5; //primary and secondary
+@rdz14_prime:1.2; //primary and secondary
 @rdz14_primelink: 0.8; //prime_link
-@rdz14_secondlink: 0.8;  //secondary_link
+@rdz14_secondlink: 0.7;  //secondary_link
+@rdz14_tertiary: 0.5;  //tertiary and tertiary_link
+@rdz14_resid: 0.3;  //residential
+
 
 
 /* --- line-width for zoom level 15 --- */
-@rdz15_motor:5.0;  //motorway and trunk
+@rdz15_motor:4.5;  //motorway and trunk
 @rdz15_mlink:2.2; //motorway_link and trunk_link
-@rdz15_prime:2.0; //primary and secondary
+@rdz15_prime:1.8; //primary and secondary
 @rdz15_primelink: 1.8;  //prime_link
 @rdz15_secondlink: 1.0; //secondary_link
-@rdz15_teritary: 0.9;  //teritary and teritary_link
+@rdz15_tertiary: 0.9;  //tertiary and tertiary_link
 @rdz15_resid: 0.9;  //residential
 
 
 /* --- line-width for zoom level 16 --- */
-@rdz16_motor:8.0;  //motorway and trunk
+@rdz16_motor:6.0;  //motorway and trunk
 @rdz16_mlink:0.8; //motorway_link and trunk_link
-@rdz16_prime:0.8; //primary and secondary
+@rdz16_prime:2.2; //primary and secondary
 @rdz16_primelink: 0.5;  //prime_link
-@rdz16_secondlink: 1.5; //secondary_link
-@rdz16_teritary: 1.5;  //teritary and teritary_link
-@rdz16_resid:1.7;   //residential
+@rdz16_secondlink: 1.0; //secondary_link
+@rdz16_tertiary: 0.8;  //tertiary and tertiary_link
+@rdz16_resid:0.9;   //residential
 
 
 /* --- line-width for zoom level 17 --- */
 @rdz17_motor:9.0;  //motorway and trunk
 @rdz17_mlink:3.5; //motorway_link and trunk_link
-@rdz17_prime:3.0; //primary and secondary
+@rdz17_prime:4.0; //primary and secondary
 @rdz17_primelink: 2.5;  //prime_link
 @rdz17_secondlink: 1.5; //secondary_link
-@rdz17_teritary:1.5;   //teritary and teritary_link
-@rdz17_resid:2.0; //residential
+@rdz17_tertiary:1.2;   //tertiary and tertiary_link
+@rdz17_resid:1.8; //residential
 
 
 /* --- line-width for zoom level 18 --- */
 @rdz18_motor:9.0;  //motorway and trunk
 @rdz18_mlink:4.0; //motorway_link and trunk_link
-@rdz18_prime:5.5; //primary and secondary
-@rdz18_primelink: 3.5;  //prime_link
+@rdz18_prime:6.5; //primary and secondary
+@rdz18_primelink: 4.5;  //prime_link
 @rdz18_secondlink: 2.5; //secondary_link
-@rdz18_teritary: 2.0;  //teritary and teritary_link
+@rdz18_tertiary: 3.0;  //tertiary and tertiary_link
 @rdz18_resid: 2.5;  //residential
 
 
@@ -235,6 +238,19 @@ roads have grouped */
       line-width:@rdz14_prime;
       line-color:@road;
   }
+ ::tertiary[type = 'tertiary']{
+      line-width:@rdz14_tertiary;
+      line-color:@road;
+  }
+::teritlink[type = 'tertiary_link']{
+      line-width:@rdz14_tertiary;
+      line-color:@road;
+  }
+::resid[type = 'residential']{
+      line-width:@rdz14_resid;
+      line-color:@road;
+  }
+
 }
 
 /*Zoom leve 15 */
@@ -259,16 +275,21 @@ roads have grouped */
       line-width:@rdz15_prime;
       line-color:@road;
   }
+
+ ::second[type = 'secondary']{
+      line-width:@rdz15_prime;
+      line-color:@road;
+  }
 ::secondlink[type = 'secondary_link']{
       line-width:@rdz15_prime;
       line-color:@road;
   }
-::teritary[type = 'teritary']{
-      line-width:@rdz15_teritary;
+::tertiary[type = 'tertiary']{
+      line-width:@rdz15_tertiary;
       line-color:@road;
   }
-::teritlink[type = 'teritary_link']{
-      line-width:@rdz15_teritary;
+::teritlink[type = 'tertiary_link']{
+      line-width:@rdz15_tertiary;
       line-color:@road;
   }
 ::resid[type = 'residential']{
@@ -300,20 +321,24 @@ roads have grouped */
       line-width:@rdz16_prime;
       line-color:@road;
   }
+::second[type = 'secondary']{
+      line-width:@rdz16_prime;
+      line-color:@road;
+  }
 ::secondlink[type = 'secondary_link']{
-      line-width:@rdz15_prime;
+      line-width:@rdz16_prime;
       line-color:@road;
   }
-::teritary[type = 'teritary']{
-      line-width:@rdz15_teritary;
+::tertiary[type = 'tertiary']{
+      line-width:@rdz15_tertiary;
       line-color:@road;
   }
-::teritlink[type = 'teritary_link']{
-      line-width:@rdz15_teritary;
+::teritlink[type = 'tertiary_link']{
+      line-width:@rdz16_tertiary;
       line-color:@road;
   }
 ::resid[type = 'residential']{
-      line-width:@rdz15_resid;
+      line-width:@rdz16_resid;
       line-color:@road;
   }
 }
@@ -340,16 +365,20 @@ roads have grouped */
       line-width:@rdz17_prime;
       line-color:@road;
   }
+::second[type = 'secondary']{
+      line-width:@rdz17_prime;
+      line-color:@road;
+  }
 ::secondlink[type = 'secondary_link']{
       line-width:@rdz17_prime;
       line-color:@road;
   }
-::teritary[type = 'teritary']{
-      line-width:@rdz17_teritary;
+::tertiary[type = 'tertiary']{
+      line-width:@rdz17_tertiary;
       line-color:@road;
   }
-::teritlink[type = 'teritary_link']{
-      line-width:@rdz17_teritary;
+::teritlink[type = 'tertiary_link']{
+      line-width:@rdz17_tertiary;
       line-color:@road;
   }
 ::resid[type = 'residential']{
