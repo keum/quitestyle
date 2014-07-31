@@ -210,6 +210,14 @@ roads have grouped */
       line-width:@rdz13_prime;
       line-color:@road;
   }
+::tertiary[type = 'tertiary']{
+      line-width:@rdz14_tertiary;
+      line-color:@road;
+  }
+::teritlink[type = 'tertiary_link']{
+      line-width:@rdz14_tertiary;
+      line-color:@road;
+  }
 }
 
 /*Zoom leve 14 */
