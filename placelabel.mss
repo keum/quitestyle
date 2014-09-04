@@ -8,8 +8,8 @@
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 10;
-  [type='city'][zoom>=8][zoom<=15] {
-    text-face-name: @sans_md;
+  [type='city'][zoom>=8][zoom<=12] {
+    text-face-name: @sans;
     text-size: 16;
     [zoom>=10] {
       text-size: 18;
@@ -40,11 +40,11 @@
   [type='suburb'],
   [type='neighbourhood'] {
     text-fill: #633;
-    text-face-name: @sans_bd;
+    text-face-name: @sans;
     text-transform: uppercase;
     text-character-spacing: 0.5;
-    [zoom>=14] { text-size: 11; }
-    [zoom>=15] { text-size: 12; text-character-spacing: 1; }
-    [zoom>=16] { text-size: 14; text-character-spacing: 2; }
+    [zoom>=14] { text-size: 12; }
+    [zoom>=15] { text-size: 13; text-character-spacing: 1; }
+    [zoom>=16] { text-size: 16; text-character-spacing: 2; }
   }
 }
